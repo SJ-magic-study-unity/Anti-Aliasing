@@ -1,0 +1,30 @@
+/************************************************************
+unityのanti-aliasing.
+	通常のobjectの他、
+	oF -syphon-> unityでdynamic textureを送る時 など
+************************************************************/
+■standard assetを使う
+	https://gametukurikata.com/standardassets/effect-standardassets/antialiasing
+	
+	contents
+		市販のscriptなどあるようだが、とりあえずStandard Assetで対応
+		
+	手順
+		以下からStandartAssetをimport
+			Asset/import package/Effects
+		
+		で、Project viewから、
+			Standard Assets/Effects/ImageEffects/Scripts/Antialiasing
+		をMain Cameraにattach.
+		
+	check
+		startして、GameViewから、on/offとすると、綺麗になっていることが確認できた。
+		ただし、oF-syphon-> unityなどで、細かい線を描いた画面を送る時などは、他にも注意する点がある(後述)
+		
+		
+■tips : oF -syphon-> unity
+	そもそもLineなどは、ギザが目立ちやすいので、materialの作成に気を使う必要がある。
+	
+	*	materialのtiling
+	*	貼り付け先のsize
+	*	oF側、元画像のLine Width
